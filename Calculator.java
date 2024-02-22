@@ -11,5 +11,17 @@ public class Calculator {
         int num2 = scanner.nextInt();
         int sum = num1 + num2;
         System.out.println("Sum: " + sum);
+
+        // Adding and/or Subtracting whole numbers
+        System.out.print("Do you want to add or subtract? (add/sub): ");
+        String operation = scanner.next();
+        if (operation.equals("add")) {
+            System.out.println("Result: " + sum);
+        } else if (operation.equals("sub")) {
+            System.out.println("Result: " + (num1 - num2));
+        } else {
+            System.out.println("Invalid operation.");
+        }
+
     }
 }
