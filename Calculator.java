@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
-        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
 
         // Adding two whole numbers
@@ -50,6 +49,16 @@ public class Calculator {
         } else if (operation.equals("mul")) {
             System.out.println("Result: " + (decimal1 * decimal2));
         } else if (operation.equals("div")) {
+            // Step 5: If divided by zero
+            if (decimal2 != 0) {
+                System.out.println("Result: " + (decimal1 / decimal2));
+            } else {
+                System.out.println("Error: Divide by Zero");
+            }
+        } else {
+            System.out.println("Invalid operation.");
+        }
+
+        scanner.close();
         }
     }
-}
