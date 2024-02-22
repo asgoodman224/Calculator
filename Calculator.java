@@ -23,5 +23,20 @@ public class Calculator {
             System.out.println("Invalid operation.");
         }
 
+        // Step 3: Multiplying/Dividing whole numbers
+        System.out.print("Do you want to multiply or divide? (mul/div): ");
+        operation = scanner.next();
+        if (operation.equals("mul")) {
+            System.out.println("Result: " + (num1 * num2));
+        } else if (operation.equals("div")) {
+            if (num2 != 0) {
+                System.out.println("Result: " + ((double) num1 / num2));
+            } else {
+                System.out.println("Error: Divide by Zero");
+            }
+        } else {
+            System.out.println("Invalid operation.");
+        }
+        
     }
 }
