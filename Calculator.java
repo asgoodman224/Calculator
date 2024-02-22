@@ -37,6 +37,19 @@ public class Calculator {
         } else {
             System.out.println("Invalid operation.");
         }
-        
+        // Step 4: adding, subtracting, multiplying, and dividing uisng decimal numbers
+         System.out.print("Enter two decimal numbers separated by space: ");
+        double decimal1 = scanner.nextDouble();
+        double decimal2 = scanner.nextDouble();
+        System.out.print("What operation do you want to perform? (add/sub/mul/div): ");
+        operation = scanner.next();
+        if (operation.equals("add")) {
+            System.out.println("Result: " + (decimal1 + decimal2));
+        } else if (operation.equals("sub")) {
+            System.out.println("Result: " + (decimal1 - decimal2));
+        } else if (operation.equals("mul")) {
+            System.out.println("Result: " + (decimal1 * decimal2));
+        } else if (operation.equals("div")) {
+        }
     }
 }
